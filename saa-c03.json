@@ -2572,14 +2572,14 @@
   "answerEnE" : "Create an Amazon EventBridge (Amazon CloudWatch Events) rule to monitor the database synchronization.",
   "answerEnF" : null,
   "questionKr" : "한 회사가 온프레미스 PostgreSQL 데이터베이스를 Amazon Aurora PostgreSQL로 마이그레이션하려고 합니다. 온프레미스 데이터베이스는 마이그레이션 중에도 온라인 상태로 유지되어야 합니다. Aurora 데이터베이스는 온프레미스 데이터베이스와 동기화된 상태로 유지되어야 합니다.\n이러한 요구 사항을 충족하기 위해 솔루션 아키텍트가 수행해야 하는 조치 조합은 무엇입니까? (두 가지를 선택하십시오.)\n\n",
-  "answerKrA" : "지속적인 복제 작업 생성",
+  "answerKrA" : " ongoing replication task 생성",
   "answerKrB" : "온프레미스 데이터베이스의 데이터베이스 백업 생성",
   "answerKrC" : "AWS 데이터베이스 마이그레이션 서비스 (AWS DMS) 복제 서버 생성",
   "answerKrD" : "AWS 스키마 변환 도구 (AWS SCT)를 사용하여 데이터베이스 스키마 변환",
   "answerKrE" : "데이터베이스 동기화를 모니터링하기 위한 Amazon 이벤트브리지 (Amazon CloudWatch Events) 규칙 생성",
   "answerKrF" : null,
   "answerList" : [ "A", "C" ],
-  "correctReason" : "정답 설명: 온프레미스 데이터베이스의 마이그레이션을 지원하기 위해 지속적인 복제 작업과 AWS DMS 복제 서버를 생성해야 합니다. 지속적인 복제 작업을 통해 Aurora 데이터베이스와 온프레미스 데이터베이스 간의 연결이 설정되며 데이터가 동기화됩니다.\n\n",
+  "correctReason" : "정답 설명: 온프레미스 데이터베이스의 마이그레이션을 지원하기 위해 지속적인 복제 작업과 AWS DMS 복제 서버를 생성해야 합니다.  ongoing replication task을 통해 Aurora 데이터베이스와 온프레미스 데이터베이스 간의 연결이 설정되며 데이터가 동기화됩니다.\n\n",
   "wrongReason" : "B. 온프레미스 데이터베이스의 백업은 데이터의 보호 및 복원을 위해 중요하지만, 마이그레이션의 목적에 맞지 않습니다.\nD. AWS 스키마 변환 도구는 데이터베이스 스키마 변환을 지원하지만, 데이터베이스 간의 복제 및 동기화와 직접적인 관련이 없습니다.\nE. Amazon 이벤트브리지를 사용하여 데이터베이스 동기화를 모니터링할 수는 있지만, 동기화 자체를 달성하기 위해 필요한 조치는 아닙니다.",
   "qnum" : "136"
 }, {
@@ -3737,7 +3737,7 @@
   "answerKrD" : "AWS Database Migration Service (AWS DMS)를 사용하여 Oracle 데이터베이스를 Amazon DynamoDB로 마이그레이션하며, Multi-AZ 배포를 사용합니다.",
   "answerKrE" : "AWS Database Migration Service (AWS DMS)를 사용하여 Oracle 데이터베이스를 Amazon RDS에서 Oracle로 마이그레이션하며, Multi-AZ 배포를 사용합니다.",
   "answerKrF" : null,
-  "answerList" : [ "B", "D" ],
+  "answerList" : [ "B", "E" ],
   "correctReason" : "B. .NET 플랫폼을 사용하여 AWS Elastic Beanstalk에서 애플리케이션을 리호스트하고, Multi-AZ 배포를 선택하는 것이 가장 적합한 방법입니다. 이를 통해 온프레미스 환경과 유사한 구성을 유지하면서 고가용성을 확보할 수 있습니다. .NET 플랫폼은 기존의 .NET 애플리케이션을 AWS 환경으로 쉽게 마이그레이션할 수 있게 해줍니다.\n\nD. AWS Database Migration Service (AWS DMS)를 사용하여 Oracle 데이터베이스를 Amazon DynamoDB로 마이그레이션하고, Multi-AZ 배포를 선택하는 것은 온프레미스 데이터베이스를 AWS로 마이그레이션하면서 고가용성을 확보하는 효과적인 방법입니다.",
   "wrongReason" : "A. AWS Lambda 함수를 사용하여 애플리케이션을 리팩터링하는 것은 개발 변경을 요구하며, .NET Core에 대한 지원은 제공되지만 전체 .NET 프레임워크에 대한 지원은 제한적입니다.\n\nC. Amazon EC2에서 Amazon Linux AMI를 사용하여 애플리케이션을 리플랫폼하면서도 온프레미스 환경과 유사한 구성을 유지할 수 있습니다. 그러나 Elastic Beanstalk처럼 관리 서비스를 활용하지 않는 한 개발 변경을 최소화하는 것은 어려울 수 있습니다.\n\nE. Oracle 데이터베이스를 Amazon RDS로 마이그레이션하는 것은 개발 변경이 필요하며, 이는 리플랫폼을 목표로 하는 요구 사항과는 다를 수 있습니다.",
   "qnum" : "197"
@@ -4955,7 +4955,7 @@
   "answerKrF" : null,
   "answerList" : [ "A", "C" ],
   "correctReason" : "A. Amazon CloudFront를 사용하여 콘텐츠를 여러 버전으로 캐시하면 다양한 지역의 사용자에게 빠르게 콘텐츠를 제공할 수 있습니다.\n\nC. Lambda@Edge 함수를 사용하여 User-Agent 헤더를 기반으로 사용자가 어떤 기기로 접근했는지 파악하고, 해당하는 콘텐츠 버전을 전달할 수 있습니다.",
-  "wrongReason" : "B. Network Load Balancer는 호스트 헤더를 기반으로 트래픽을 다른 인스턴스로 전달할 수 있지만, 이는 지역별이 아닌 호스트별 라우팅입니다.\n\nD. AWS Global Accelerator는 다양한 지역의 사용자에게 빠르게 트래픽을 전달하기 위한 서비스이며, 호스트 또는 경로 기반 라우팅을 지원하지 않습니다. Network Load Balancer를 통해 해당 라우팅을 설정해야 합니다.\n\nE. AWS Global Accelerator를 사용하여 경로 기반 라우팅을 구성하는 것은 지원하지 않습니다. AWS Global Accelerator는 IP 주소 기반 라우팅만을 지원하며, 요청을 다른 지역의 EC2 인스턴스로 라우팅할 수 있습니다. 경로 기반 라우팅은 Network Load Balancer를 통해 설정해야 합니다.",
+  "wrongReason" : "B. Network Load Balancer는 호스트 헤더를 기반으로 트래픽을 다른 인스턴스로 전달할 수 있지만, 이는 지역별이 아닌 호스트별 라우팅입니다. (Protocol & Port)\n\nD. AWS Global Accelerator는 다양한 지역의 사용자에게 빠르게 트래픽을 전달하기 위한 서비스이며, 호스트 또는 경로 기반 라우팅을 지원하지 않습니다. Network Load Balancer를 통해 해당 라우팅을 설정해야 합니다.\n\nE. AWS Global Accelerator를 사용하여 경로 기반 라우팅을 구성하는 것은 지원하지 않습니다. AWS Global Accelerator는 IP 주소 기반 라우팅만을 지원하며, 요청을 다른 지역의 EC2 인스턴스로 라우팅할 수 있습니다. 경로 기반 라우팅은 Network Load Balancer를 통해 설정해야 합니다.",
   "qnum" : "261"
 }, {
   "questionEn" : "A company plans to use Amazon ElastiCache for its multi-tier web application. A solutions architect creates a Cache VPC for the ElastiCache cluster and an App VPC for the application’s Amazon EC2 instances. Both VPCs are in the us-east-1 Region.\n\nThe solutions architect must implement a solution to provide the application’s EC2 instances with access to the ElastiCache cluster.\n\nWhich solution will meet these requirements MOST cost-effectively?\n\n",
@@ -7918,7 +7918,7 @@
   "answerKrE" : null,
   "answerKrF" : null,
   "answerList" : [ "C" ],
-  "correctReason" : "C. Compute Savings Plan을 구매하고, Lambda 함수의 성능 및 리소스 사용을 최적화하여 네트워크 지연을 최소화하고, EC2 인스턴스가 있는 개인 서브넷에 Lambda 함수를 연결함으로써 네트워크 액세스를 확보하는 것이 적절한 조치입니다.",
+  "correctReason" : "C. Compute Savings Plan을 구매하고, Lambda 함수의 성능 및 리소스 사용을 최적화하여 네트워크 지연을 최소화하고, EC2 인스턴스가 있는 개인 서브넷에 Lambda 함수를 연결함으로써 네트워크 액세스를 확보하는 것이 적절한 조치입니다.\nCompute Saving Plan으로 EC2, lambda 둘 다 운영비용을 줄일 수 있다. EC2 인스턴스랑 같은 서브넷에 넣어서 트래픽 비용을 줄일 수 있다.",
   "wrongReason" : "A. EC2 인스턴스 Savings Plan을 구매하고, EC2 인스턴스와 Lambda 함수를 개인 서브넷에 연결해도 EC2 인스턴스와 Lambda 함수 간의 네트워크 액세스를 제공하지 못합니다.\n\nB. Lambda 함수를 공용 서브넷에 연결하면 EC2 인스턴스와 Lambda 함수 간의 직접적인 네트워크 액세스가 불가능하며, 네트워크 지연이 높아질 수 있습니다.\n\nD. lambda 함수는 AWS 내부에서 관리되는 서비스이며, Lambda 함수가 VPC 내에서 실행될 때에는 해당 VPC의 리소스에 액세스할 수 있지만, 외부 리소스에 대한 직접적인 네트워크 액세스는 제한됩니다. 따라서 Lambda 함수가 EC2 인스턴스가 있는 개인 서브넷에 연결되더라도 EC2 인스턴스에 대한 네트워크 액세스를 제공하지 못합니다. Lambda 함수는 외부 리소스에 대한 액세스를 위해 AWS 내부 네트워크를 통해 통신해야 합니다.",
   "qnum" : "417"
 }, {
